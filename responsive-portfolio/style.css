@@ -63,6 +63,21 @@ section {
     line-height: 1.2;
 }
 
+.nav-links {
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: underline;
+    cursor: pointer;
+    color: inherit;
+}
+
+.nav-links a:hover {
+    color: var(--bg); 
+    background-color: var(--text);
+}
+
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
