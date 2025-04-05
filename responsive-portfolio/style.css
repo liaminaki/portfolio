@@ -1,0 +1,139 @@
+:root {
+    --bg: white;
+    --text: black;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body.light-theme {
+    --bg: white;
+    --text: #111;
+}
+
+body.dark-theme {
+    --bg: #111;
+    --text: #eee;
+}
+
+body {
+    font-family: monospace, 'Courier New', Courier;
+    line-height: 1.6;
+    font-size: 0.75em;
+    height: 100vh;
+    margin: 40px;
+    background-color: var(--bg);
+    color: var(--text);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+.hero {
+    height:  calc(100vh - 80px);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.hero p::before {
+    content: "-------------------------------";
+    display: block;
+}
+
+.section-title {
+    font-size: 1em;
+    margin-top: 0;
+}
+
+
+.ascii-art {
+    white-space: pre;
+    line-height: 1.2;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+
+.skill-item {
+    display: flex;
+}
+
+.skill-number {
+    width: 30px;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+
+.project {
+    margin-bottom: 30px;
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.project-title {
+    font-weight: bold;
+}
+
+.project-links {
+    margin-top: 10px;
+}
+
+.project-links a {
+    display: block;
+    text-decoration: none;
+    color: #555;
+}
+
+.project-links a:hover {
+    text-decoration: underline;
+}
+
+.project-image {
+    line-height: 1;
+    white-space: pre;
+    margin: 10px 0;
+}
+
+.theme-toggle input[type="radio"] {
+    display: none;
+}
+
+.theme-toggle label {
+    cursor: pointer;
+    padding-left: 2em;
+    position: relative;
+}
+
+.theme-toggle label::before {
+    content: "[ ]";
+    position: absolute;
+    left: 0;
+}
+
+#light:checked ~ label[for="light"]::before,
+#dark:checked ~ label[for="dark"]::before {
+    content: "[X]";
+}
