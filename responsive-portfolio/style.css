@@ -1,11 +1,7 @@
+/* Basic Styles */
 :root {
     --bg: #eee;
     --text: #111;
-}
-
-body.dark-theme {
-    --bg: #111;
-    --text: #eee;
 }
 
 * {
@@ -25,51 +21,57 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
+body.dark-theme {
+    --bg: #111;
+    --text: #eee;
 }
 
 section {
     margin-bottom: 40px;
 }
 
-.hero {
-    height:  calc(100vh - 80px);
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-direction: column;
+h1, h2 {
+    font-size: 1em;
+    margin-top: 0;
+    margin-bottom: 1em;
+    font-weight: bold;
+    min-width: 300px;
 }
 
-.hero p::before {
+h1::before, 
+h1::after,
+.hero p::before  {
     content: "-------------------------------";
     display: block;
 }
 
-.section-title {
-    font-size: 1em;
-    margin-top: 0;
+h2::before {
+    content: "// ";
 }
 
-
-.ascii-art {
-    white-space: pre;
-    line-height: 1.2;
-}
-
-.nav-links {
-    list-style: none;
-}
-
-.nav-links a {
+a {
     text-decoration: underline;
     cursor: pointer;
     color: inherit;
 }
 
-.nav-links a:hover {
+a:hover {
     color: var(--bg); 
+    background-color: var(--text);
+}
+
+button {
+    background-color: var(--bg);
+    padding: 0.25em 0.5em;
+    color: var(--text);
+    font: inherit;
+    border: 1px dashed var(--text);
+    margin-top: 15px;
+    cursor: pointer;
+    color: inherit;
+}
+
+button:hover {
     background-color: var(--text);
 }
 
@@ -175,21 +177,6 @@ section {
 
 .contact-form textarea {
   height: 100px;
-}
-
-button {
-    background-color: var(--bg);
-    padding: 0.25em 0.5em;
-    color: var(--text);
-    font: inherit;
-    border: 1px dashed var(--text);
-    margin-top: 15px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: var(--text);
-    color: var(--bg);
 }
 
 /* Responsive Layout */
