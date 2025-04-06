@@ -169,6 +169,10 @@ button:hover {
     min-width: 300px;
 }
 
+.contact-form form {
+    width: 90%;
+}
+
 .contact-form label {
     display: block;
     margin-bottom: 0.5em;
@@ -216,4 +220,7 @@ button:hover {
     order: 1;
   }
 
+  .contact-form form {
+    width: 100%;
+  }
 }
