@@ -39,7 +39,8 @@ h1, h2 {
 
 h1::before, 
 h1::after,
-.hero p::before  {
+.hero p::before,
+nav .nav-links::before {
     content: "-------------------------------";
     display: block;
     font-weight: normal;
@@ -75,10 +76,15 @@ button:hover {
     color: var(--bg);
 }
 
+nav {
+    height: 100px;
+    display: block;
+}
+
 .hero {
-    height:  calc(100vh - 80px);
+    height:  calc(100vh - 180px);
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: flex-start;
     flex-direction: column;
 }
