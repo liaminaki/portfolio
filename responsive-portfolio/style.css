@@ -103,41 +103,19 @@ section {
 .projects {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 20px;
 }
 
 .project {
     margin-bottom: 30px;
+    max-width: 300px;
 }
 
-.project-header {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-}
-
-.project-title {
-    font-weight: bold;
+.project-desc {
+    min-height: 100px; 
 }
 
 .project-links {
     margin-top: 10px;
-}
-
-.project-links a {
-    display: block;
-    text-decoration: none;
-    color: #555;
-}
-
-.project-links a:hover {
-    text-decoration: underline;
-}
-
-.project-image {
-    line-height: 1;
-    white-space: pre;
-    margin: 10px 0;
 }
 
 .theme-toggle input[type="radio"] {
