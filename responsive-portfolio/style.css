@@ -66,7 +66,7 @@ button {
     padding: 0.25em 0.5em;
     color: var(--text);
     font: inherit;
-    border: 1px dashed var(--text);
+    border: 1px solid var(--text);
     margin-top: 15px;
     cursor: pointer;
 }
