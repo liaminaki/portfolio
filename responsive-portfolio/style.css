@@ -68,7 +68,6 @@ button {
     border: 1px dashed var(--text);
     margin-top: 15px;
     cursor: pointer;
-    color: inherit;
 }
 
 button:hover {
