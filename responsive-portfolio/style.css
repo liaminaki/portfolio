@@ -73,6 +73,24 @@ button {
 
 button:hover {
     background-color: var(--text);
+    color: var(--bg);
+}
+
+.hero {
+    height:  calc(100vh - 80px);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.ascii-art {
+    white-space: pre;
+    line-height: 1.2;
+}
+
+.nav-links {
+    list-style: none;
 }
 
 .skill-group, .contact-container {
