@@ -157,18 +157,28 @@ _|    |_
         
         function updateTheme() {
             if (lightRadio.checked) {
-                document.body.classList.add('light-theme');
                 document.body.classList.remove('dark-theme');
             } else if (darkRadio.checked) {
                 document.body.classList.add('dark-theme');
-                document.body.classList.remove('light-theme');
             }
         }
 
+        // Default to system preference
+        darkRadio.checked = window.matchMedia('(prefers-color-scheme: dark)').matches;
         updateTheme();
 
+        // Override system preference if user selects a theme
         lightRadio.addEventListener('change', updateTheme);
         darkRadio.addEventListener('change', updateTheme);
+
+        // Listen for system preference changes
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change',({ matches }) => {
+            if (matches) 
+                darkRadio.checked = true;
+            else
+                lightRadio.checked = true;
+            updateTheme();
+        })
     </script>
 </body>
 </html>

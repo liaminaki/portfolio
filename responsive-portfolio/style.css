@@ -3,20 +3,17 @@
     --text: #111;
 }
 
+@media (prefers-color-scheme: dark) {
+    body.dark-theme {
+        --bg: #111;
+        --text: #eee;
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body.light-theme {
-    --bg: white;
-    --text: #111;
-}
-
-body.dark-theme {
-    --bg: #111;
-    --text: #eee;
 }
 
 body {
