@@ -73,7 +73,7 @@ section {
     background-color: var(--text);
 }
 
-.skill-group {
+.skill-group, .contact-container {
     margin-bottom: 2em;
     display: flex;
     flex-wrap: wrap;
@@ -137,4 +137,79 @@ section {
 #light:checked ~ label[for="light"]::before,
 #dark:checked ~ label[for="dark"]::before {
     content: "[X]";
+}
+
+/* Contact Form */
+.contact-info {
+    flex: 1;
+    min-width: 200px;
+}
+
+.contact-form {
+    flex: 2;
+    min-width: 300px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+.contact-form input,
+.contact-form textarea {
+  border: 1px dashed #555;
+  background-color: transparent;
+  color: var(--text);
+  font: inherit;
+  padding: 6px;
+  width: 100%;
+  margin-bottom: 1em;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border: 1px solid var(--text);
+    border-color: var(--text); 
+}
+
+.contact-form textarea {
+  height: 100px;
+}
+
+button {
+    background-color: var(--bg);
+    padding: 0.25em 0.5em;
+    color: var(--text);
+    font: inherit;
+    border: 1px dashed var(--text);
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--text);
+    color: var(--bg);
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+
+  .contact-container {
+    flex-direction: column;
+  }  
+
+  .contact-info {
+    margin-top: 40px;
+    order: 2;
+  }
+
+  .contact-info::before {
+    content: "-------------------------------";
+  }
+
+  .contact-form {
+    order: 1;
+  }
+
 }
