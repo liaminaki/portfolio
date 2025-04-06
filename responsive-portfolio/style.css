@@ -3,10 +3,6 @@
     --text: #111;
 }
 
-/* @media (prefers-color-scheme: dark) {
-    
-} */
-
 body.dark-theme {
     --bg: #111;
     --text: #eee;
