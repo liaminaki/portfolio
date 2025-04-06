@@ -131,17 +131,17 @@ nav {
 }
 
 .project {
-    margin-bottom: 30px;
     max-width: 300px;
 }
 
 .project-desc {
-    min-height: 100px; 
+    min-height: 100px;
+    margin-bottom: 1.5em; 
 }
 
-.project-links {
+/* .project-links {
     margin-top: 10px;
-}
+} */
 
 .theme-toggle input[type="radio"] {
     display: none;
