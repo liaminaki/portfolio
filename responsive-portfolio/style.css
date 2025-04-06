@@ -77,18 +77,31 @@ section {
     background-color: var(--text);
 }
 
-.skills-grid {
+.skill-group {
+    margin-bottom: 2em;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.skill-group h2 {
+    flex: 1;
+    min-width: 200px;
+}
+
+.skill-items {
+    flex: 2;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
 
 .skill-item {
     display: flex;
+    font-size: 1em;
 }
 
-.skill-number {
-    width: 30px;
+.skill-item img {
+    margin-right: 10px;
+    width: 1em;
 }
 
 .projects {
