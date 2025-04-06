@@ -139,9 +139,11 @@ nav {
     margin-bottom: 1.5em; 
 }
 
-/* .project-links {
-    margin-top: 10px;
-} */
+.project::after {
+    content: "---------";
+    display: block;
+    margin-top: 1em;
+}
 
 .theme-toggle input[type="radio"] {
     display: none;
