@@ -29,12 +29,15 @@ section {
     margin-bottom: 40px;
 }
 
+h1, h2, nav, .hero {
+    min-width: 300px;
+}
+
 h1, h2 {
     font-size: 1em;
     margin-top: 0;
     margin-bottom: 1em;
     font-weight: bold;
-    min-width: 300px;
 }
 
 h1::before, 
