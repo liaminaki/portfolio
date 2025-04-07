@@ -212,6 +212,20 @@ nav {
   height: 100px;
 }
 
+/* Flying Plane */
+.ascii-art-section {
+    display: flex;
+    overflow: hidden;
+    justify-content: flex-end;
+    width: 0%;
+    animation: moveRightAtScroll 1s linear;
+    animation-timeline: scroll();
+}
+
+@keyframes moveRightAtScroll {
+    80% {width: 100%;}
+}
+
 /* Responsive Layout */
 @media (max-width: 768px) {
 
